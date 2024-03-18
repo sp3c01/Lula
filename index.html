@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sim ou Não</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  #image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Ajuste a margem superior para mover a imagem para baixo */
+  }
+  #image-container img {
+    width: 250px; /* Defina a largura da imagem como 250px */
+    max-height: 100%;
+  }
+</style>
+<script>
+  function onYesClicked() {
+    alert('Obrigado!');
+  }
+
+  function onNoClicked() {
+    document.getElementById('image-container').innerHTML = '<img src="imagens/lula.jpg" alt="Pinguim">';
+  }
+</script>
+</head>
+<body>
+<div class="container">
+  <button class="btn" onclick="onYesClicked()">Sim</button>
+  <button class="btn" onclick="onNoClicked()">Não</button>
+  <div id="image-container"></div>
+</div>
+</body>
+</html>
